@@ -203,9 +203,12 @@ nav {
 
 .navbar .nav-brand {
 	flex: 1;
+	    z-index: 3;
+	    display: flex;
+	    justify-content: space-between;
 }
 
-.nav-brand img {
+.nav-brand .molite-logo {
 	width: 10.5vw;
 }
 
@@ -232,6 +235,12 @@ nav {
 	line-height: 1.15;
 }
 
+@media (max-width: 768px) {
+	.navbar .nav-link {
+		font-size: 16px;
+	}
+}
+
 .navbar .links {
 	flex: 1;
 	text-align: center;
@@ -242,6 +251,12 @@ nav {
 	text-align: right;
 }
 
+.nav-toggle {
+	display: none;
+	background-color: transparent;
+	border: none;
+}
+
 @media (max-width: 768px) {
 	.navbar ul {
 		    position: absolute;
@@ -249,6 +264,9 @@ nav {
 		    top: 0;
     flex-direction: column;
     width: 100%;
+    z-index: 2;
+    background-color: #1C3664;
+    display: none;
 	}
 
 	.navbar ul div {
@@ -258,7 +276,16 @@ nav {
 	.navbar ul li {
 		display: block;
 		text-align: center;
+		padding: 5% 0;
 	}
+
+	.nav-toggle {
+		display: block;
+	}
+
+.show-nav {
+	display: block !important;
+}
 }
 
 .decorative-whitelines {
