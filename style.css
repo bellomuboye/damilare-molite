@@ -267,6 +267,7 @@ nav {
     z-index: 2;
     background-color: #1C3664;
     display: none;
+    padding: 3em 0;
 	}
 
 	.navbar ul div {
